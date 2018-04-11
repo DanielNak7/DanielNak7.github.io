@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<!--linking the social media icons to html-->
+
+<link rel="stylesheet" type="text/css" href="master.css">
+	<!--linking css to the html-->
+	
+<title>Daniel Nakamoto</title>
+
+</head>
+
+
+<body>
+	<!--Below is the code for the navigation bar-->
+	<div id= "main">
+		<nav>
+		<img src="<!--Add a cool logo name design--> width="200" height="80">  
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Who I Am</a></li>
+				<li><a href="#">Educational Background</a></li>
+				<li><a href="#">Professional Background</a></li>
+				<li><a href="#">My Skills</a></li>
+				<li><a href="#">Something</a></li>
+			</ul>
+		</nav>
+
+<div class = "content">
+		<img src = "mypic.jpg" class = "profilepic">
+		<center><h1>Daniel Nakamoto</h1></center>
+		<h3>Business Student</h3>
+		<p>add some text about yourself and the website maybe, who knows... be creative and get an A</p>
+	<br><br><br><br><br><br><br><br>
+		<a href = "<!--Insert resume link-->">  <i class="fas fa-file-pdf" style = "color:red; font-size:30px">   My_Resume.Pdf</i></a>
+</div>
+
+
+</body>
+</html>

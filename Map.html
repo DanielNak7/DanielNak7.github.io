@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Map</title>
+
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Google Map</title>
+  
+  
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+  
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<!--linking the social media icons to html-->
+
+<link rel="stylesheet" type="text/css" href="master.css">
+	<!--linking css to the html-->
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#Map {
+			height:500px;
+			width: 100%;
+			}
+			
+	</style>
+	
+	
+</head>
+
+<body>
+	<!--Below is the code for the navigation bar-->
+	<div id= "main">
+		<nav>
+		<img src="Name.PNG" width="250" height="80" style= "margin-left: 5px" class = "name">  
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="WhoIAm.html">Who I Am</a></li>
+				<li><a href="Background.html">Background</a></li>
+				<li><a href="MySkills.html">My Skills</a></li>
+				<li><a href="Map.html">Map of where I've been</a></li>
+			</ul>
+		</nav>
+		
+		
+		
+		
+		<b><Center><h1 style="font-size:80px">Map</h1></center><b>
+		
+	<div class = "Map">
+		<u><u><i><center><h1>My Map</h1></center></i></u></u><br><br>
+		
+		
+		<!--Google Map code-->
+		  <center><p>"This map marks all of the places in the world that I have been.  One of my favorite things to do is to travel.  One day I hope to travel the world and fill this map up with markers."</p></center>
+		  <br>
+		  
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:5,
+        center:{lat:36.684402,lng:-121.802170}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+	
+		
+		
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:36.684402,lng:-121.802170
+},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:38.575764	,lng:-121.478851},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:35.652832,lng:139.839478}
+        },
+		
+		  {
+          coords:{lat:47.608013,lng:-122.335167
+},
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:	40.730610	,lng:-73.935242},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:34.052235,lng:-118.243683}
+        },
+		  {
+          coords:{lat:37.468319,lng:-122.143936
+},
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:		34.052235	,lng:-118.243683},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:35.376175	,lng:-119.022102}
+        },
+		{
+          coords:{lat:21.289373	,lng:-157.917480
+},
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:		19.432608	,lng:-99.133209},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:32.774799	,lng:-117.071869}
+        },
+		
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+		
+		addMarker({lat:47.608013,lng:-122.335167});
+	  
+	  
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAurIqaoRI0XccC5q3Grc2Jl4waUNF9zgc&callback=initMap"
+  type="text/javascript"></script>
+
+	
+		
+	
+	</div>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+		<!--add social media links-->
+	<div class= "box">
+				<a class = "tw fab fa-twitter-square" a href= "https://twitter.com/Danieltrades7"></a>
+				<a class = "ig fab fa-instagram" a href= "https://www.instagram.com/danielnakk/"></a>
+				<a class = "li fab fa-linkedin" href= "https://www.linkedin.com/in/daniel-nakamoto-b08b95159/"></a>
+				<a class = "fb fab fa-facebook" href= "https://www.facebook.com/daniel.nakamoto"></a>
+			
+		</div>
+			
+		
+		
+<footer>
+  <center><p style= "color:#FFFFFF">&copy; Copyright 2018. All Rights Reserved.</p></center>
+</footer>
+<br>
+
+		
+</body>
+</html>
